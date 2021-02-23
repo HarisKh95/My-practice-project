@@ -24,11 +24,11 @@
                                         <div class="form-group">
                                             <input type="email" class="form-control form-control-user"
                                                 id="exampleInputEmail"
-                                                placeholder="Enter Email Address...">
+                                                autofocus="autofocus" placeholder="Enter Email Address...">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user"
-                                                id="exampleInputPassword" placeholder="Password">
+                                            autofocus="autofocus" id="exampleInputPassword" placeholder="Password">
                                         </div>
 
                                         
