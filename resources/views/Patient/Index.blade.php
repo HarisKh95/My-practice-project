@@ -12,13 +12,13 @@
         <title>Patient - Dashboard</title>
     
         <!-- Custom fonts for this template-->
-        <link href="{{ asset('vendor/fontawesome/css/all.min.css') }}" rel="stylesheet" type="text/css">
+        <link href="{{ asset('public/vendor/fontawesome/css/all.min.css') }}" rel="stylesheet" type="text/css">
         <link
             href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
             rel="stylesheet">
     
         <!-- Custom styles for this template-->
-        <link href="{{ asset('css/sb-admin-2.min.css') }}" rel="stylesheet">
+        <link href="{{ asset('public/css/sb-admin-2.min.css') }}" rel="stylesheet">
     
     </head>
     
@@ -268,7 +268,7 @@
                                     </h6>
                                     <a class="dropdown-item d-flex align-items-center" href="#">
                                         <div class="dropdown-list-image mr-3">
-                                            <img class="rounded-circle" src="{{ asset('img/undraw_profile_1.svg') }}"
+                                            <img class="rounded-circle" src="{{ asset('public/img/undraw_profile_1.svg') }}"
                                                 alt="">
                                             <div class="status-indicator bg-success"></div>
                                         </div>
@@ -280,7 +280,7 @@
                                     </a>
                                     <a class="dropdown-item d-flex align-items-center" href="#">
                                         <div class="dropdown-list-image mr-3">
-                                            <img class="rounded-circle" src="{{ asset('img/undraw_profile_2.svg') }}"
+                                            <img class="rounded-circle" src="{{ asset('public/img/undraw_profile_2.svg') }}"
                                                 alt="">
                                             <div class="status-indicator"></div>
                                         </div>
@@ -292,7 +292,7 @@
                                     </a>
                                     <a class="dropdown-item d-flex align-items-center" href="#">
                                         <div class="dropdown-list-image mr-3">
-                                            <img class="rounded-circle" src="{{ asset('img/undraw_profile_3.svg') }}"
+                                            <img class="rounded-circle" src="{{ asset('public/img/undraw_profile_3.svg') }}"
                                                 alt="">
                                             <div class="status-indicator bg-warning"></div>
                                         </div>
@@ -326,7 +326,7 @@
                                     data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                     <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
                                     <img class="img-profile rounded-circle"
-                                        src="{{ asset('img/undraw_profile.svg') }}">
+                                        src="{{ asset('public/img/undraw_profile.svg') }}">
                                 </a>
                                 <!-- Dropdown - User Information -->
                                 <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
@@ -411,21 +411,21 @@
         </div>
     
         <!-- Bootstrap core JavaScript-->
-        <script src="{{ asset('vendor/jquery/jquery.min.js') }}"></script>
-        <script src="{{ asset('vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
+        <script src="{{ asset('public/vendor/jquery/jquery.min.js') }}"></script>
+        <script src="{{ asset('public/vendor/bootstrap/js/bootstrap.bundle.min.js') }}"></script>
     
         <!-- Core plugin JavaScript-->
-        <script src="{{ asset('vendor/jquery-easing/jquery.easing.min.js') }}"></script>
+        <script src="{{ asset('public/vendor/jquery-easing/jquery.easing.min.js') }}"></script>
     
         <!-- Custom scripts for all pages-->
-        <script src="{{ asset('js/sb-admin-2.min.js') }}"></script>
+        <script src="{{ asset('public/js/sb-admin-2.min.js') }}"></script>
     
         <!-- Page level plugins -->
-        <script src="{{ asset('vendor/chart.js/Chart.min.js') }}"></script>
+        <script src="{{ asset('public/vendor/chart.js/Chart.min.js') }}"></script>
     
         <!-- Page level custom scripts -->
-        <script src="{{ asset('js/demo/chart-area-demo.js') }}"></script>
-        <script src="{{ asset('js/demo/chart-pie-demo.js') }}"></script>
+        <script src="{{ asset('public/js/demo/chart-area-demo.js') }}"></script>
+        <script src="{{ asset('public/js/demo/chart-pie-demo.js') }}"></script>
     
     </body>
     

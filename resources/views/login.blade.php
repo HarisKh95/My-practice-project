@@ -7,41 +7,50 @@
         <div class="row justify-content-center">
 
             <div class="col-xl-10 col-lg-12 col-md-9">
-                <div class="card o-hidden border-0 shadow-lg my-5">
+                {{-- <div class="card o-hidden border-0 shadow-lg my-5"> --}}
                     <div class="card-body p-0">
                         
                         <!-- Nested Row within Card Body -->
                         <div class="row">
                             <div class="col-lg-6 d-none d-lg-block bg-login-image">
-                                <img src={{ asset('img/mike-noemi-gonzalez-BkQyT1K8J6k-unsplash.jpg') }} width="500" height="800">
+                                <img src={{ asset('public/img/mike-noemi-gonzalez-BkQyT1K8J6k-unsplash.jpg') }} width="500" height="800">
                             </div>
                             <div class="col-lg-6">
                                 <div class="p-5">
                                     <div class="text-center">
                                         <h1 class="h4 text-gray-900 mb-4">Welcome Back!</h1>
+                                        @if ($errors->any())
+                                        <div class="alert alert-danger">
+                                            <ul>
+                                                @foreach ($errors->all() as $error)
+                                                    <li>{{ $error }}</li>
+                                                @endforeach
+                                            </ul>
+                                        </div>
+                                    @endif
                                     </div>
-                                    <form class="user">
+                                    {{-- <form class="user"> --}}
+
+                                    <form action="{{ route('userlogin') }}"  method="post">
+                                        @csrf
                                         <div class="form-group">
-                                            <input type="email" class="form-control form-control-user"
-                                                id="exampleInputEmail"
-                                                autofocus="autofocus" placeholder="Enter Email Address...">
+                                            <input type="email" class="form-control form-control-user" id="email" name="email" autofocus="autofocus" placeholder="Enter Email Address...">
                                         </div>
                                         <div class="form-group">
-                                            <input type="password" class="form-control form-control-user"
-                                            autofocus="autofocus" id="exampleInputPassword" placeholder="Password">
+                                            <input type="password" class="form-control form-control-user" autofocus="autofocus" id="password" name="password" placeholder="Password">
                                         </div>
 
                                         
                                         <div class="form-group">
                                             <div class="input-group mb-3 ">
-                                                <select class="custom-select form-control form-control-user" id="inputGroupSelect02">
+                                                <select class="custom-select form-control form-control-user" id="role" name="role">
                                                   <option selected>Select</option>
                                                   <option value="Patient">Patient</option>
                                                   <option value="Doctor">Doctor</option>
                                                   <option value="Admin">Admin</option>
                                                 </select>
                                                 <div class="input-group-append">
-                                                  <label class="input-group-text form-control form-control-user" for="inputGroupSelect02">Role</label>
+                                                  <label class="input-group-text form-control form-control-user" for="role">Role</label>
                                                 </div>
                                               </div>
                                         </div>
@@ -53,9 +62,10 @@
                                                     Me</label>
                                             </div>
                                         </div>
-                                        <a href="index.html" class="btn btn-primary btn-user btn-block">
+                                        <button class="btn btn-primary btn-user btn-block" type="submit">
                                             Login
-                                        </a>
+                                        </button>
+
                                         <hr>
                                         <a href="index.html" class="btn btn-google btn-user btn-block">
                                             <i class="fab fa-google fa-fw"></i> Login with Google
@@ -75,7 +85,7 @@
                             </div>
                         </div>
                     </div>
-                </div>
+                {{-- </div> --}}
 
             </div>
 
