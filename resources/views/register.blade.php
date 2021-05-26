@@ -7,7 +7,7 @@
                 <!-- Nested Row within Card Body -->
                 <div class="row">
                     <div class="col-lg-5 d-none d-lg-block bg-register-image">
-                        <img src={{ asset('public/img/ashkan-forouzani-l-NIPb-9Njg-unsplash.jpg') }} width="500" height="700">
+                        <img src={{ asset('img/ashkan-forouzani-l-NIPb-9Njg-unsplash.jpg') }} width="500" height="700">
                     </div>
                     <div class="col-lg-7">
 
@@ -86,7 +86,7 @@
                                 <a class="small" href="forgot-password.html">Forgot Password?</a>
                             </div>
                             <div class="text-center">
-                                <a class="small" href="login.html">Already have an account? Login!</a>
+                                <a class="small" href="{{ route('mylogin') }}">Already have an account? Login!</a>
                             </div>
                         </div>
                     </div>

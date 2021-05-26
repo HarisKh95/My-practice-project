@@ -4,9 +4,10 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\User;
 use App\Models\Role;
-use Illuminate\Support\Facades\Auth;
+// use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Session;
 use Hash;
-// use Auth;
+use Auth;
 use Validator;
 class RegisterController extends Controller
 {
@@ -82,5 +83,13 @@ class RegisterController extends Controller
             return redirect()->route('mylogin')->withErrors('Email or Password are incorrect.');
         }       
         return response()->json("New User login");
+    }
+
+    public function mylogout()
+    {
+        Auth::logout();
+        // Session::flush();
+        return redirect()->route('mylogin');
+
     }
 }

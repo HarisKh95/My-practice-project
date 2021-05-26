@@ -29,8 +29,9 @@ Route::get('login1',function()
 Route::get('register1',function()
 {
     return view('register');
-});
+})->name('myregister');
 
+Route::post('/logout',[RegisterController::class,'mylogout'])->name('userlogout');
 
 Route::group(['prefix'=>'admin'],function(){
     Route::middleware(['guest:admin'],function(){
@@ -78,5 +79,5 @@ Route::post('newlogin',[RegisterController::class,'newlogin'])->name('userlogin'
 
 
 
-Auth::routes();
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Auth::routes();
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
